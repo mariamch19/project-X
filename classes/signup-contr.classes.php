@@ -13,7 +13,7 @@ class SignupContr extends signup  {
         $this->email = $email;
     }
 
-    public function singupUser() {
+    public function SignupUser() {
         if ($this->emptyInput() == false) {
             //echo "Empty input!";
             header("Location: ../index.php?error=emptyInput");

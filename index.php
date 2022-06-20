@@ -8,15 +8,13 @@ session_start();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DOCUMENT</title>
-        <link href="http://fonts.googleapis.com/css?family=roboto:ital,wgh@0;100;0;46"
-        <link rel="stylessheet" href="style.css">
+        <link href="http://fonts.googleapis.com/css?family=roboto:ital,wgh@0;100;0;46">
+<!--        <link rel="stylessheet" href="style.css">-->
+        <link rel="stylesheet" href="style.css">
     </head>
       
     <body>
      <form method="post" action="login.php">
-        <input type="text" id="email" placeholder="Email..."><br>
-        <input type="password" id="password" placeholder="Password..."><br>
-        <input type="submit" value="login">
         </form>
         <script scr="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
          <script>
@@ -30,9 +28,9 @@ session_start();
     
     <header>
         <nav>
-            <div>
+            <div> <br><br> 
                 <h3>DEVELOPER ALLIENCE</h3>
-                <Ul class="menu-main">
+                <Ul class="menu-main"><br><br>
                     <li><a href="index.php">HOME</a></li>
                     <li><a href="#">PRODUCTS</a></li>
                     <li><a href="#">CURRENT</a></li>
@@ -45,14 +43,14 @@ session_start();
                      {
                     ?>
                     <li><a href="#"><?php echo $_session["userid"]; ?></a></li>
-                    <li><a href="includes/logout.inc.php" class="header-login-a><LOGOUT</a></li>
+                    <li><a href="includes/logout.inc.php" class="header-login-a">LOGOUT</a></li>
                     <?php 
                      }
                      else
                      {
                         ?>
                         <li><a href="#"><SIGN UP></a></li>
-                    <li><a href="#" class="header-login-a><LOGIN</a></li>
+                    <li><a href="#" class="header-login-a">LOGIN</a></li>
                     <?php 
                          }
                 ?>
@@ -73,14 +71,14 @@ session_start();
           </div>
         </div>
     </div>       
-</section>
+    </section>
 
 <section class="index-login">
     <div class="wrapper">
-        <div class="index-login-singup">
+        <div class="index-login-signup">
             <h4>singup</h4>
             <p>Don't have an account yet? sing up here!</p>
-            <form action="include/singup.inc.php" method="post">
+            <form action="include/signup.inc.php" method="post">
                 <input type="text" name="uid" placeholder="Username">
                 <input type="password" name="pwd" placeholder="Password">
                 <input type="password" name="pwdrepeat" placeholder="Repeat Password">
