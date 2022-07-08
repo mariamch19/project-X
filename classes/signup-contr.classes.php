@@ -3,13 +3,13 @@
 class SignupContr extends signup  {
     private $uid;
     private $pwd;
-    private $pwdRepeat;
+    private $pwdrepeat;
     private $email;
 
-    public function __construct($uid, $pwd, $pwdRepeat, $email) {
+    public function __construct($uid, $pwd, $pwdrepeat, $email) {
         $this->uid = $uid;
         $this->pwd = $pwd;
-        $this->pwdRepeat = $pwdRepeat;
+        $this->pwdrepeat = $pwdrepeat;
         $this->email = $email;
     }
 
@@ -20,8 +20,8 @@ class SignupContr extends signup  {
             exit();
         }
         if ($this->invalidUid() == false) {
-            //echo "invalid username!";
-            header("Location: ../index.php?error=username");
+            //echo "invalid usernames!";
+            header("Location: ../index.php?error=usernames");
             exit();
         }
         if ($this->invalidEmail() == false) {
@@ -41,14 +41,14 @@ class SignupContr extends signup  {
              header("Location: ../index.php?error=useroremailtaken");
              exit();
         }
-             $this->setUser($this->uid, $this->pwd,$this->email);
+             $this->setUser($this->uid, $this->email, $this->pwd, $this->pwdrepeat);
     }
 
 
 
     private function emptyInput() {
         '$result';
-       if (empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email)) {
+       if (empty($this->uid) || empty($this->pwd) || empty($this->pwdrepeat) || empty($this->email)) {
            $result = false;
        }
        else {
@@ -87,7 +87,7 @@ class SignupContr extends signup  {
     private function pwdMatch()
     {
         '$result';
-        if ($this->pwd !== $this->pwdRepeat)
+        if ($this->pwd !== $this->pwdrepeat)
         {
             $result = false;
         }

@@ -50,7 +50,6 @@ session_start();
                      {
                         ?>
                         <li><a href="#"><SIGN UP></a></li>
-                    <li><a href="#" class="header-login-a">LOGIN</a></li>
                     <?php 
                          }
                 ?>
@@ -79,25 +78,15 @@ session_start();
             <h4>singup</h4>
             <p>Don't have an account yet? sing up here!</p>
             <form action="include/signup.inc.php" method="post">
-                <input type="text" name="uid" placeholder="Username">
-                <input type="password" name="pwd" placeholder="Password">
-                <input type="password" name="pwdrepeat" placeholder="Repeat Password">
-                <input type="text" name="email" placeholder="e-mail">
+                <input type="text" name="uid" placeholder="usernames"required>
+                <input type="password" name="pwd" placeholder="Password"required>
+                <input type="password" name="pwdrepeat" placeholder="Repeat Password"required>
+                <input type="text" name="email" placeholder="e-mail"required>
                 <br>
                 <button type="submit" name="submit"> SING UP </button>
             </form> 
           </div>
-          <div class="index-login-login">
-               <h4>LOGIN</h4>
-               <p>Don't have an account yet? sing up here!</p>
-               <form actio="include/login.inc.php" method="post"> 
-               <input type="text" name="uid" placeholder="Username">
-                <input type="password" name="pwd" placeholder="Password">
-                <br>
-                <button type="submit" name="submit"> LOG IN </button>
-               </form>
-             </div>
-        </div>
+        
 </section>
 
 </body>

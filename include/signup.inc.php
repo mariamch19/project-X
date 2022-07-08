@@ -14,7 +14,7 @@ if(isset($_POST["submit"]))
     $usernames = "root";
     $password = "";
     $dbh = new PDO('mysql:host=localhost;dbname=ooplogin', $usernames, $password);
-    $sql = "INSERT INTO users  (users_id, user_uid, users_pwd, users_email) VALUES (?,?,?,?);";
+    $sql = "INSERT INTO users(users_uid,users_id, users_pwd, users_email) VALUES (?,?,?,?);";
     $dbh->prepare($sql)->execute([$uid, $pwd, $pwdrepeat, $email]);
     
     //instantiate SingupContr class
